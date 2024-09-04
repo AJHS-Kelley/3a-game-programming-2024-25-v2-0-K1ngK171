@@ -29,6 +29,9 @@ print(str(newNumber)) # con convert INTEGER to STRING.
 newNumber = input("Please type a value and press enter.\n")
 #print(int(newNumber)) <-- cannot convert FLOAT to INTEGER.
 print(float(newNumber)) # can convert STRING to INTEGER.
-print(str(newNumber)) # can convert Float to INTEGER
+print(str(newNumber)) # can convert Float to INTEGER.
 
 # str() will convert the data to a STRING id possible.
+newNumber = 5
+print(newNumber + newNumber) # Should print 10
+print(str(newNumber + newNumber)) # Should print 55.
