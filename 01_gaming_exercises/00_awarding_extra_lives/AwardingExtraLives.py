@@ -1,38 +1,37 @@
 # Awarding Extra Lives, Roy Smith IV, v0.0
 
-score = 0
+
+score = int(input("please input your score here.\n"))
 lives = 3
+name = "Roy"
+
+
+# print(f"Hello {name}!  You scored {score} points.\n")
+
+
+# CHARACTER REFERENCE
+# CURLY BRACES {}
+# BRAKETS[]
+# ANGLE BRAKETS <>
+# PARENTHESIS ()
 
 # Allow the user to input the score AS AN INTEGER
 # If score is 10000 or less
     # Lose a Life
-# If score is > 10000 but less than 100001
+# Else if score is > 10000 but less than 100001
     # Gives 1 Extra Life
-# If score is > 100000 
+# else score is > 100000 
     # Gain 2 Extra Lives
 
 # Output the score and nuimber if lives on screen
 
-if score > 100:
-    print("it is hot as the sun outside.\n")
 
-if score >= 10000:
-    print("can i got home?\n")
+if score <= 10000:
+    lives -= 1
+elif score < 100001:
+    lives += 1
+elif score > 100000:
+    lives += 2
 
-if score:
-    print("Disgusting")
-
-
-if score == "1":
-    print("Your shirt is the correct uniform shirt.\n")
-else:
-    print("Your shirt is not the correct uniform shirt.\n")
-
-if score >= 6:
-    print("I wear a shoe size of 8.\n")
-else:
-    print("I dont wear a shoe size of 8.\n")
-
-
-
-
+print(f" you have {lives} lives remaining.\n")
+print(f"{name}, You scored {score} points.\n")
