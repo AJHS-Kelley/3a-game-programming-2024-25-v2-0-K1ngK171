@@ -23,7 +23,7 @@ name = "Roy"
 # else score is > 100000 
     # Gain 2 Extra Lives
 
-# Output the score and nuimber if lives on screen
+# Output the score and number if lives on screen
 
 
 if score <= 10000:
