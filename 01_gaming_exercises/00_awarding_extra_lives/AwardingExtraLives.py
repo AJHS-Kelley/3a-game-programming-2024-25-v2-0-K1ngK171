@@ -27,7 +27,7 @@ name = "Roy"
 
 
 if score <= 10000:
-    lives -= 1
+    lives -= 1    
 elif score < 100001:
     lives += 1
 elif score > 100000:

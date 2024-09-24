@@ -59,14 +59,14 @@ while playerScore < 5 and cpuScore < 5:
         print(f"You have chosen {playerChoice}.\n")
     else:
         print(f"You have chosen {playerChoice}.\n")
-
-cpuChoice = random. randint(0,2 ) # randomly slect 0, 1, 2
-if cpuChoice == 0:
-    cpuChoice = "rock"
-elif cpuChoice == 1:
-    cpuChoice = "paper"
-elif cpuChoice == 2:
-    cpuChoice = "scissors"
+# STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
+    cpuChoice = random. randint(0,2 ) # randomly slect 0, 1, 2
+    if cpuChoice == 0:
+        cpuChoice = "rock"
+    elif cpuChoice == 1:
+        cpuChoice = "paper" 
+    elif cpuChoice == 2:
+        cpuChoice = "scissors"
 else:
     print("Unable to determine CPU choice,\n Please restart.\n")
     exit()
