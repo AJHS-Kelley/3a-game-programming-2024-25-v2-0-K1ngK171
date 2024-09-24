@@ -73,47 +73,47 @@ else:
 print(f"CPU Choice: {cpuChoice}")
 
 # compare player choice to cpou choice
-if playerChoice ==  "rock" and cpuChoice == "paper":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    cpuChoice += 1
-    # cpu wins
-elif playerChoice ==  "rock" and cpuChoice == "scissors":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    cpuChoice += 1
-    # player wins
-elif playerChoice ==  "rock" and cpuChoice == "rock":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    # DRAW
-elif playerChoice ==  "scissors" and cpuChoice == "rock":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    cpuChoice += 1
-    # cpu wins
-elif playerChoice ==  "scissors" and cpuChoice == "paper":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
+    if playerChoice ==  "rock" and cpuChoice == "paper":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        cpuChoice += 1
+        # cpu wins
+    elif playerChoice ==  "rock" and cpuChoice == "scissors":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        cpuChoice += 1
+        # player wins
+    elif playerChoice ==  "rock" and cpuChoice == "rock":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        # DRAW
+    elif playerChoice ==  "scissors" and cpuChoice == "rock":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        cpuChoice += 1
+        # cpu wins
+    elif playerChoice ==  "scissors" and cpuChoice == "paper":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
     playerChoice += 1
     # player wins
-elif playerChoice ==  "scissors" and cpuChoice == "scissors":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    cpuChoice += 1
-    # draw
-elif playerChoice ==  "paper" and cpuChoice == "paper":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    playerChoice += 1
-    # cpu wins
-elif playerChoice ==  "paper" and cpuChoice == "paper":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    playerChoice += 1
-    # player wins
-elif playerChoice ==  "paper" and cpuChoice == "paper":
-    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-    print("the cpu wins a point")
-    playerChoice += 1
-    # draw
+    elif playerChoice ==  "scissors" and cpuChoice == "scissors":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        cpuChoice += 1
+        # draw
+    elif playerChoice ==  "paper" and cpuChoice == "paper":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        playerChoice += 1
+        # cpu wins
+    elif playerChoice ==  "paper" and cpuChoice == "paper":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        playerChoice += 1
+        # player wins
+    elif playerChoice ==  "paper" and cpuChoice == "paper":
+        print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("the cpu wins a point")
+        playerChoice += 1
+        # draw
