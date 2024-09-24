@@ -3,6 +3,7 @@
 # Module Imports
 import random
 
+
 # DATA STRUCTURES -- PLAYERS
 playerScore = 0
 playerName = "Test Player"
@@ -21,17 +22,16 @@ isCorrect = input("Is that correct?  Type yes or no and press enter.\n ").lower(
 # .upper() can turn ALL input into uppercase.
 
 if isCorrect == "yes":
-    print(Ok {palyerNmae})
-
-
-
+    print(f"Ok {playerName}, let's play Rock, Paper, Scissors!\n")
+else:
+    playerName = input("Please type your name and press enter.\n")
 
 # THE RULES using MULTI LINE STRINGS
 print (f"""
-welcome, {playerName} to the game of rock paper scissors!
+Welcome, {playerName} to the game of rock paper scissors!
 its time to play
        
-you will play against a cpu. the first player to score 5 points wins.
+you will play against a cpu. The first player to score 5 points wins.
 you will select from rock paper or scissors.
 the cpu will select rock papaer scissors at random.
        
@@ -48,11 +48,72 @@ putting an # in fron of 15 different lines.
 """
 
 # MAIN GAME LOOP
-while playerscore < 5 and cpuScore < 5:
+while playerScore < 5 and cpuScore < 5:
     print(f"{playerName} you have {playerScore} points.\n The CPU has {cpuScore} points.\n")
-    playerChoice = input 
-    # print the current score for cpu and player.
-    # let player rock, paper, scissor.
-    # compare player choice to cpu choice
-    # print the results to the screen
-    # award point to winner and output results.
+    playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
+    if playerChoice != "rock" or playerChoice != "Paper" or playerChoice != "Scissors":
+        playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
+        if playerChoice != "rock" or playerChoice != "paper" or playerChoice != "scissors":
+            print("You are not following directions. Please try again.\n")
+            exit()
+        print(f"You have chosen {playerChoice}.\n")
+    else:
+        print(f"You have chosen {playerChoice}.\n")
+
+cpuChoice = random. randint(0,2 ) # randomly slect 0, 1, 2
+if cpuChoice == 0:
+    cpuChoice = "rock"
+elif cpuChoice == 1:
+    cpuChoice = "paper"
+elif cpuChoice == 2:
+    cpuChoice = "scissors"
+else:
+    print("Unable to determine CPU choice,\n Please restart.\n")
+    exit()
+print(f"CPU Choice: {cpuChoice}")
+
+# compare player choice to cpou choice
+if playerChoice ==  "rock" and cpuChoice == "paper":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    cpuChoice += 1
+    # cpu wins
+elif playerChoice ==  "rock" and cpuChoice == "scissors":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    cpuChoice += 1
+    # player wins
+elif playerChoice ==  "rock" and cpuChoice == "rock":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    # DRAW
+elif playerChoice ==  "scissors" and cpuChoice == "rock":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    cpuChoice += 1
+    # cpu wins
+elif playerChoice ==  "scissors" and cpuChoice == "paper":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    playerChoice += 1
+    # player wins
+elif playerChoice ==  "scissors" and cpuChoice == "scissors":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    cpuChoice += 1
+    # draw
+elif playerChoice ==  "paper" and cpuChoice == "paper":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    playerChoice += 1
+    # cpu wins
+elif playerChoice ==  "paper" and cpuChoice == "paper":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    playerChoice += 1
+    # player wins
+elif playerChoice ==  "paper" and cpuChoice == "paper":
+    print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+    print("the cpu wins a point")
+    playerChoice += 1
+    # draw
