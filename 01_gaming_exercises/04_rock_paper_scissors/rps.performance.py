@@ -20,7 +20,7 @@ loopsReq = int(input("How many loops do you want?\nEnter an intger, no commas, a
 rpsTimeStart = time.time() # returns the number of seconds since JAN. 01, 1970 @ 12.00AM 
 # print ("life")
 while loopCount < loopsReq:
-        # print ("crash")
+    print ("crash")
         # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
         # let cpu select at random
     cpuChoice = random. randint(0,2) # randomly slect 0, 1, 2
@@ -34,15 +34,15 @@ while loopCount < loopsReq:
         print("Unable to determine CPU choice,\n Please restart.\n")
         exit()
         # print(f"CPU Choice: {cpuChoice}")
-
+    #print ("crash c") 
         #   let PLAYER select choice at random
-    cpuChoice = random. randint(0, 2) # randomly slect 0, 1, or 2
-    if cpuChoice == 0:
-        cpuChoice = "rock"
-    elif cpuChoice == 1:
-        cpuChoice = "scissors" 
-    elif cpuChoice == 2:
-        cpuChoice = "paper"
+    playerChoice = random. randint(0, 2) # randomly slect 0, 1, or 2
+    if playerChoice == 0:
+        playerChoice = "rock"
+    elif playerChoice == 1:
+        playerChoice = "scissors" 
+    elif playerChoice == 2:
+        playerChoice = "paper"
     else:
         print("Unable to determine CPU choice,\nPlease restart.\n")
         exit()
@@ -67,7 +67,7 @@ while loopCount < loopsReq:
     elif playerChoice ==  "scissors" and cpuChoice == "rock":
         print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("the cpu wins a point")
-        cpuChoice += 1
+        cpuScore += 1
         # cpu wins
     elif playerChoice ==  "scissors" and cpuChoice == "paper":
         print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
@@ -93,7 +93,7 @@ while loopCount < loopsReq:
         print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("the cpu wins a point")
         cpuScore += 1
-        # draw  
+        # draw 
     
 
 print(f"Your Final Score: {playerScore}\nCPU Final score  {cpuScore}\nDraws: {numDraws}\n")
