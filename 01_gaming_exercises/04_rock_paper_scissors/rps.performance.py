@@ -93,7 +93,11 @@ while loopCount < loopsReq:
         print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("the cpu wins a point")
         cpuScore += 1
-        # draw 
+        # draw
+    else:
+        print("unable to determine a winner, please restart.\n")
+        exit()
+    loopCount += 1
     
 
 print(f"Your Final Score: {playerScore}\nCPU Final score  {cpuScore}\nDraws: {numDraws}\n")
