@@ -18,11 +18,11 @@ loopCount = 0
 loopsReq = int(input("How many loops do you want?\nEnter an intger, no commas, and press ENTER.\n"))
 # req is the universal abbreviations in computer programming for REQUEST.  reqs = REQUESTS
 rpsTimeStart = time.time() # returns the number of seconds since JAN. 01, 1970 @ 12.00AM 
-
+# print ("life")
 while loopCount < loopsReq:
-
-    # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
-    # let cpu select at random
+        # print ("crash")
+        # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
+        # let cpu select at random
     cpuChoice = random. randint(0,2) # randomly slect 0, 1, 2
     if cpuChoice == 0:
         cpuChoice = "rock"
@@ -33,22 +33,22 @@ while loopCount < loopsReq:
     else:
         print("Unable to determine CPU choice,\n Please restart.\n")
         exit()
-    # print(f"CPU Choice: {cpuChoice}")
+        # print(f"CPU Choice: {cpuChoice}")
 
-    #   let PLAYER select choice at random
-    cpuChoice = random. randint(0,2) # randomly slect 0, 1, 2
+        #   let PLAYER select choice at random
+    cpuChoice = random. randint(0, 2) # randomly slect 0, 1, or 2
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1:
-        cpuChoice = "paper" 
+        cpuChoice = "scissors" 
     elif cpuChoice == 2:
-        cpuChoice = "scissors"
+        cpuChoice = "paper"
     else:
-        print("Unable to determine CPU choice,\n Please restart.\n")
+        print("Unable to determine CPU choice,\nPlease restart.\n")
         exit()
-    loopCount += 1
+        # print (f"CPU Choice: {cpuChoice}"")
 
-    # compare player choice to cpu choice
+        # compare player choice to cpu choice
     if playerChoice ==  "rock" and cpuChoice == "paper":
         print(f"the CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("the cpu wins a point")
