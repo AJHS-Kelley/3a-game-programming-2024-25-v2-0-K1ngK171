@@ -17,41 +17,34 @@ def playerName(): # Function Signature -- name of function, (arguments if any)
     playerName = input("Please type your name and press enter.\n")
     print(f"Hello {playerName}!\n")
     isCorrect = input("Is that correct?  Type yes or no and press enter.\n ").lower()
-
-    # .lower() can turn ALL input into lowercase.
-    # .upper() can turn ALL input into uppercase.
-
     if isCorrect == "yes":
         print(f"Ok {playerName}, let's play Rock, Paper, Scissors!\n")
     else:
         playerName = input("Please type your name and press enter.\n")
+    return playerName
 
 # CALLING THE FUNCTION
-playerName()
+playerName = playerName()
+
 # THE RULES using MULTI LINE STRINGS
-print (f"""
-Welcome, {playerName} to the game of rock paper scissors!
-its time to play
+def rules():
+    print (f"""
+    Welcome, {playerName} to the game of rock paper scissors!
+    its time to play
        
-you will play against a cpu. The first player to score 5 points wins.
-you will select from rock paper or scissors.
-the cpu will select rock papaer scissors at random.
+    you will play against a cpu. The first player to score 5 points wins.
+    you will select from rock paper or scissors.
+    the cpu will select rock papaer scissors at random.
        
-1) ROCK BEATS SCISSORS
-2) SCISSORS BEATS PAPER
-3) PAPER BEATS ROCKS
-""")
+    1) ROCK BEATS SCISSORS
+    2) SCISSORS BEATS PAPER
+    3) PAPER BEATS ROCKS
+    """)
+    #Does another part of this program need to access this information?
+    # IF YES, YOU MUST HAVE A return FUNCTION
+    # IF NO, A return STATEMENT IS NOT NEEDED
 
-# MULTI-LINE STRING CAN BE USED AS BIG COMMENTS
-"""
-anything in between the set of double- is just ignored.
-If you need to write large comments, it's easier to use multi-line strings
-putting an # in fron of 15 different lines.
-"""
-
-# MAIN GAME LOOP
-while playerScore < 5 and cpuScore < 5:
-    print(f"{playerName} you have {playerScore} points.\n The CPU has {cpuScore} points.\n")
+def playerChoice():
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" or playerChoice != "Paper" or playerChoice != "Scissors":
         playerChoice = input("please enter rock, paper, or scissors and press enter.\n").lower()
@@ -61,7 +54,9 @@ while playerScore < 5 and cpuScore < 5:
         print(f"You have chosen {playerChoice}.\n")
     else:
         print(f"You have chosen {playerChoice}.\n")
-        # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
+    return playerChoice
+
+def cpuChoice():
     cpuChoice = random. randint(0,2 ) # randomly slect 0, 1, 2
     if cpuChoice == 0:
         cpuChoice = "rock"
@@ -72,7 +67,19 @@ while playerScore < 5 and cpuScore < 5:
     else:
         print("Unable to determine CPU choice,\n Please restart.\n")
         exit()
-    print(f"CPU Choice: {cpuChoice}")
+    return cpuChoise
+"""
+anything in between the set of double- is just ignored.
+If you need to write large comments, it's easier to use multi-line strings
+putting an # in fron of 15 different lines.
+"""
+
+# MAIN GAME LOOP
+while playerScore < 5 and cpuScore < 5:
+    print(f"{playerName} you have {playerScore} points.\n The CPU has {cpuScore} points.\n")
+    
+        # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
+    
 
 # compare player choice to cpou choice
     if playerChoice ==  "rock" and cpuChoice == "paper":
