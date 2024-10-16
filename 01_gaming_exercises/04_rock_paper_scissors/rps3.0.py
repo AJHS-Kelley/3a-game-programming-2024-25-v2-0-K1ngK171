@@ -3,7 +3,6 @@
 # Module Imports
 import random, time
 
-
 # DATA STRUCTURES -- PLAYERS
 playerScore = 0
 playerName = "Test Player"
@@ -13,19 +12,22 @@ playerChoice = None
 cpuScore = 0
 cpuChoice= None
 
-# PLAYER NAME INPUT
-playerNmae = input("Please type your name and press enter.\n")
-print(f"Hello {playerName}!\n")
-isCorrect = input("Is that correct?  Type yes or no and press enter.\n ").lower()
-
-# .lower() can turn ALL input into lowercase.
-# .upper() can turn ALL input into uppercase.
-
-if isCorrect == "yes":
-    print(f"Ok {playerName}, let's play Rock, Paper, Scissors!\n")
-else:
+# PLAYER NAME INPUT 
+def playerName(): # Function Signature -- name of function, (arguments if any)
     playerName = input("Please type your name and press enter.\n")
+    print(f"Hello {playerName}!\n")
+    isCorrect = input("Is that correct?  Type yes or no and press enter.\n ").lower()
 
+    # .lower() can turn ALL input into lowercase.
+    # .upper() can turn ALL input into uppercase.
+
+    if isCorrect == "yes":
+        print(f"Ok {playerName}, let's play Rock, Paper, Scissors!\n")
+    else:
+        playerName = input("Please type your name and press enter.\n")
+
+# CALLING THE FUNCTION
+playerName()
 # THE RULES using MULTI LINE STRINGS
 print (f"""
 Welcome, {playerName} to the game of rock paper scissors!
@@ -59,7 +61,7 @@ while playerScore < 5 and cpuScore < 5:
         print(f"You have chosen {playerChoice}.\n")
     else:
         print(f"You have chosen {playerChoice}.\n")
-# STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
+        # STARTING FROM THIS LINE, EVERY LINE NEEDS TO MOVE RIGHT BY ONE TAB. 
     cpuChoice = random. randint(0,2 ) # randomly slect 0, 1, 2
     if cpuChoice == 0:
         cpuChoice = "rock"
