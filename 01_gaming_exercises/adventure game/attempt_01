@@ -1,0 +1,38 @@
+# Adventure attempt 1, Roy Smith IV, V0.1
+
+
+
+def start_game():
+    print("Welcome to The Land Of Teyvat!")
+    name = input("What is your name? ")
+    print(f"Hello, {name}! Let's begin your journey.")
+
+    current_room = "forest"
+    while True:
+        if current_room == "forest":
+            print("You are in a dense forest. You can see a path to the north and a cave to the east.")
+            choice = input("What do you do? (north/east): ").lower()
+            if choice == "north":
+                current_room = "path"
+            elif choice == "east":
+                current_room = "cave"
+            else:
+                print("Invalid choice. Try again.")
+
+        elif current_room == "path":
+            print("You follow the path and reach a river. There is a bridge to the west.")
+            choice = input("What do you do? (west): ").lower()
+            if choice == "west":
+                current_room = "bridge"
+            else:
+                print("Invalid choice. Try again.")
+
+        elif current_room == "cave":
+            print("You enter the cave and find a treasure chest!")
+            print("Congratulations, you have won the game!")
+            break
+
+        elif current_room == "bridge":
+            print("You cross the bridge and reach a castle.")
+            print("To be continued...")
+            break
