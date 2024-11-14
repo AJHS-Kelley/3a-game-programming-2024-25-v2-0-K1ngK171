@@ -23,7 +23,7 @@ def helloWorldMulti(): # FUNCTION SIGNATURE
     if language == "E":
         print("In English:\nHello world.\n")
     elif language == "S":
-        print("In English:\nHola mundo!\n")
+        print("In Spanish:\nHola mundo!\n")
     elif language == "J":
         print("In Japanese:\nKonichiwa sekai!\n")
     elif language == "K":
