@@ -8,7 +8,7 @@ def helloWorldMulti(): # FUNCTION SIGNATURE
     print("""
         Welcome to the Hello World Translator
         The available language choice are:
-        [E]nghlish
+        [E]nglish
         [S]panish
         [J]apanese
         [K]orean
