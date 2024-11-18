@@ -1,4 +1,4 @@
-# Adventure attempt 1, Roy Smith IV, V0.1
+# Adventure attempt 1, Roy Smith IV, V0.3
  
 import random
 import time
@@ -6,7 +6,7 @@ import datetime
 
 # SAVING DATA TO A FILE
 # STeP 1 -- Create the file name
-logFileName = "dragonrealmlog" + str(time.time()) + "txt"
+logFileName = "dragonrealmlog"
 # Example: dragonrealmlog1132AM.txt
 
 # STEP 2 -- Create / Open the file to save the data
@@ -16,6 +16,14 @@ saveData = open(logFileName, "a")
 # "X" CREATES FILE, IF FILE EXIST, EXIST WITH ERROR MESSSAGE
 # "W" CREATES FILE, IF FILE EXIST, ERASE AND OVERWRITE CONTENTS
 # "a" CREATES FILE, IF FILE EXIST, APPEND DATA TO THE FILE
+
+#ITEM LIST
+hasSpear = False
+hasSword = False
+hasOrb = False
+hasBow = False
+hasGreatSword = False
+
 
 saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
@@ -38,12 +46,12 @@ def chooseCave():
 
 def check(chosenArea):
     print('You headed to the city to grab some gear...')
-    time.sleep(2)
+    time.sleep(1)
     print('The City is lively and vivid...')
-    time.sleep(2)
-    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    time.sleep(1)
+    print('You head to the blacksmith to choose your weapon...')
     print()
-    time.sleep(2)
+    time.sleep(1)
 
     friendlyCave = random.randint(1, 2)
 
@@ -68,4 +76,5 @@ while playAgain == 'yes' or playAgain == 'y':
 
 
 # ClOSE THE FILE
+saveData.write("END OF GAME LOG\n\n")
 saveData.close()
