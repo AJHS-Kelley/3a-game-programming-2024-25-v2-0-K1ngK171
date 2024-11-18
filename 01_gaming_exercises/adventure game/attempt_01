@@ -20,44 +20,52 @@ saveData = open(logFileName, "a")
 saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
 
-def start_game():
-    print("Welcome to The Land Of Teyvat!")
-    name = input("What is your name? ")
-    print(f"Hello, {name}! Let's begin your journey.")
+def displayIntro():
 
-    current_room = "forest"
-    while True:
-        if current_room == "forest":
-            print("You are in a dense forest. You can see a path to the north and a city to the east.")
-            choice = input("What do you do? (north/east): ").lower()
-            if choice == "north":
-                current_room = "path"
-            elif choice == "east":
-                current_room = "city"
-            else:
-                print("Invalid choice. Try again.")
+    print('You are in a land full of wonder. In front of you,')
+    print('you see a cave on your left and a city on your right')
+    print('which path would you like to start off with?')
+    print()
 
-        elif current_room == "path":
-            print("You follow the path and reach a river. There is a bridge to the west.")
-            choice = input("What do you do? (west): ").lower()
-            if choice == "west":
-                current_room = "bridge"
-            else:
-                print("Invalid choice. Try again.")
+def chooseCave():
+    cave = '1'
+    city = '2'
+    while cave != '1' and city != '2':
+        print('what direction will you go? (1 or 2)')
+        cave = input()
+    return cave
 
-        elif current_room == "cave":
-            print("You enter the cave and find a treasure chest!")
-            print("Congratulations, you have won the game!")
-            break
 
-        elif current_room == "bridge":
-            print("You cross the bridge and another city")
-            print("To be continued...")
-            break
+def check(chosenArea):
+    print('You headed to the city to grab some gear...')
+    time.sleep(2)
+    print('The City is lively and vivid...')
+    time.sleep(2)
+    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    print()
+    time.sleep(2)
+
+    friendlyCave = random.randint(1, 2)
+
+    if chosenArea == str(friendlyCave):
+        print('Gives you his treasure!')
+
+    else:
+        print('Gobbles you down in one bite!')
+
+
+
+playAgain = 'yes'
+
+while playAgain == 'yes' or playAgain == 'y':
+    displayIntro()
+    caveNumber = chooseCave()
+    check(caveNumber)
+    print('Do you want to play again? (yes or no)')
+    playAgain = input()
 
 
 
 
 # ClOSE THE FILE
 saveData.close()
-
