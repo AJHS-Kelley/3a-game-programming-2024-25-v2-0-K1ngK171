@@ -1,5 +1,23 @@
 # Adventure attempt 1, Roy Smith IV, V0.1
+ 
+import random
+import time
+import datetime
 
+# SAVING DATA TO A FILE
+# STeP 1 -- Create the file name
+logFileName = "dragonrealmlog" + str(time.time()) + "txt"
+# Example: dragonrealmlog1132AM.txt
+
+# STEP 2 -- Create / Open the file to save the data
+
+saveData = open(logFileName, "a")
+# FILE MODES
+# "X" CREATES FILE, IF FILE EXIST, EXIST WITH ERROR MESSSAGE
+# "W" CREATES FILE, IF FILE EXIST, ERASE AND OVERWRITE CONTENTS
+# "a" CREATES FILE, IF FILE EXIST, APPEND DATA TO THE FILE
+
+saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
 
 
 def start_game():
@@ -10,12 +28,12 @@ def start_game():
     current_room = "forest"
     while True:
         if current_room == "forest":
-            print("You are in a dense forest. You can see a path to the north and a cave to the east.")
+            print("You are in a dense forest. You can see a path to the north and a city to the east.")
             choice = input("What do you do? (north/east): ").lower()
             if choice == "north":
                 current_room = "path"
             elif choice == "east":
-                current_room = "cave"
+                current_room = "city"
             else:
                 print("Invalid choice. Try again.")
 
@@ -33,6 +51,13 @@ def start_game():
             break
 
         elif current_room == "bridge":
-            print("You cross the bridge and reach a castle.")
+            print("You cross the bridge and another city")
             print("To be continued...")
             break
+
+
+
+
+# ClOSE THE FILE
+saveData.close()
+
