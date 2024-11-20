@@ -1,4 +1,5 @@
 # Adventure attempt 1, Roy Smith IV, V0.3
+# You have a lot of code to add.   You need to finish by Friday. 
  
 import random
 import time
@@ -6,7 +7,7 @@ import datetime
 
 # SAVING DATA TO A FILE
 # STeP 1 -- Create the file name
-logFileName = "dragonrealmlog"
+logFileName = "dragonrealmlog" # add .txt to the file name.  
 # Example: dragonrealmlog1132AM.txt
 
 # STEP 2 -- Create / Open the file to save the data
@@ -52,7 +53,7 @@ def check(chosenArea):
     time.sleep(1)
     print("The blacksmith asks you which weapon would you like him to craft")
     time.sleep(1)
-
+    
     friendlyCave = random.randint(1, 2)
 
     if chosenArea == str(friendlyCave):
