@@ -1,6 +1,9 @@
 # Adventure attempt 1, Roy Smith IV, V0.4
 # You have a lot of code to add.   You need to finish by Friday. 
- 
+# Roy, I am glad you used some outside resources for this project. 
+# BUT it doesn't all work.  You need to do one of two things:  make it work or remove it. 
+# You have until 2024-12-16 @ 3:00PM to resubmit any changes. 
+
 import random
 import time
 import datetime
